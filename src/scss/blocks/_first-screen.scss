@@ -1,0 +1,116 @@
+.first-screen {
+  position: relative;
+  padding-top: 190px;
+  padding-bottom: 223px;
+
+  @include decorative-img(
+    '../img/first-screen.png',
+    807px,
+    100%,
+    '',
+    '',
+    0,
+    50%,
+    'right bottom'
+  );
+
+  &__title {
+    @include h1();
+    max-width: 825px;
+    margin: 0;
+    margin-bottom: 52px;
+    font-family: $secondary-font;
+    line-height: 120px;
+    color: $blue;
+  }
+
+  &__text {
+    @include h5();
+    line-height: 46px;
+    max-width: 665px;
+    margin: 0;
+    margin-bottom: 72px;
+    color: $gray-200;
+  }
+
+  &__btn {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media #{$lg} {
+    padding-top: 120px;
+    padding-bottom: 180px;
+
+    &::after {
+      left: 41%;
+    }
+
+    &__title {
+      &::after {
+        top: -115px;
+      }
+    }
+  }
+
+  @media #{$md} {
+    &::after {
+      left: 35%;
+    }
+
+    &__title {
+      max-width: 750px;
+
+      &::after {
+        right: 0;
+      }
+    }
+
+    &__text {
+      max-width: 525px;
+    }
+  }
+
+  @media #{$sm} {
+    &::after {
+      left: 30%;
+    }
+
+    &__title {
+      max-width: 550px;
+
+      &::after {
+        right: 50px;
+      }
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 50px;
+    padding-bottom: 342px;
+
+    &::after {
+      right: 0;
+      left: auto;
+      width: 344px;
+      height: 394px;
+    }
+
+    &__title {
+      margin-bottom: 21px;
+
+      &::after {
+        width: 17px;
+        height: 46px;
+        top: -50px;
+        right: 90px;
+      }
+    }
+
+    &__text {
+      margin-bottom: 32px;
+      font-size: 12px;
+      line-height: 22px;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+extends /layouts/index
+
+append head
+  title Home
+
+block main
+  main.main-content
+    .first-screen
+      .main-content__wrapper
+        h1.first-screen__title Good health <br>above all else
+        p.first-screen__text Prescription costs are too high. We provide access.
+        a.first-screen__btn.btn.btn--big Contact Us
+    .explanation-block.explanation-block--first
+      .main-content__wrapper
+        .explanation-block__wrapper
+          .explanation-block__column
+            h1.explanation-block__title What is <br>Good Pill?
+          .explanation-block__column
+            p.explanation-block__text We’re a non-profit, home-delivery pharmacy that’s dedicated to providing people with affordable medication. We fill prescriptions for anyone whose co-pay or deductibles are too high, or those who don’t have insurance at all.
+    .we-believe
+      .main-content__wrapper
+        .we-believe__wrapper
+          h2.we-believe__title We believe
+          ul.we-believe__list
+            li.we-believe__item.we-believe__item--first
+              h4.we-believe__item-title Everyone deserves affordable medicine.
+              p.we-believe__item-text We’re committed to getting you the medicine you need, no matter how high your costs are. With us there are no hidden fees and zero restrictions on age, income, or insurance.
+            li.we-believe__item.we-believe__item--second
+              h4.we-believe__item-title Health over profit, always.
+              p.we-believe__item-text Humans are at the heart of everything we do. Our flexible billing means you don’t pay until you’ve received your prescriptions. We keep costs low so you can focus on what’s important — your health.
+            li.we-believe__item.we-believe__item--third
+              h4.we-believe__item-title Your time matters.
+              p.we-believe__item-text Once you complete our one-time, 5-minute registration and your doctor or pharmacy sends us your prescription, we'll deliver your medicine directly to your home.
+            li.we-believe__item.we-believe__item--fourth
+              h4.we-believe__item-title Transparency is key.
+              p.we-believe__item-text Good Pill provides excellent customer support and keeps communication open so you know exactly what’s happening. 
+              p.we-believe__item-text We send texts and emails when we receive prescriptions and are preparing refills, share tracking information once we ship, and send alerts when you’ve run out of refills.    
+    .explanation-block.explanation-block--second
+      .main-content__wrapper
+        .explanation-block__wrapper
+          .explanation-block__column
+            h1.explanation-block__title Is Good Pill <br>right for you?
+          .explanation-block__column
+            p.explanation-block__text If you're a Georgia resident and take chronic medications, have high medication costs, or have a hard time getting to the pharmacy, Good Pill is here for you. We’re dedicated to serving as many people as possible, but we may not be the best fit for everyone.
+            a(href="#").explanation-block__btn.btn.btn--big.btn--white Learn more
+    .saves
+      .main-content__wrapper
+        .saves__wrapper
+          h2.saves__title Good Pill saves
+          .saves__form-field.form-field.form-field--border-rounded.form-field--search
+            input(type="text" placeholder="Search your medication")
+          .saves__columns
+            .saves__column
+              b.saves__price
+                h5.saves__price-title Retail cost
+                | $350.00
+            .saves__column
+              b.saves__price.saves__price--brand-color
+                h5.saves__price-title Goodpill price
+                | $270.00
+    .steps
+      .main-content__wrapper
+        .steps__wrapper
+          h2.steps__title Get your medicine in three simple steps
+          p.steps__subtitle We dispense 90 day supplies, as appropriate, and deliver to your home in 5-7 days from the time we receive your prescription.
+          .steps__switcher.switcher
+            a(href="#").switcher__btn.switcher__btn--active From my doctor’s office
+            a(href="#").switcher__btn From another pharmacy
+          ul.steps__list
+            li.steps__item.steps__item--step-1
+              h4.steps__item-title 1. Check our stock
+              p.steps__item-text We have over 
+                a(href="#").link 450 medications 
+                | available, but be sure to check before you register.
+              p.steps__item-text Please note that we don’t carry opioids or other controlled drugs, insulin, or test strips.
+            li.steps__item.steps__item--step-2
+              h4.steps__item-title 2. Register
+              p.steps__item-text If we have your medication, complete our one-time registration by clicking <b>“register now”</b> below.
+              p.steps__item-text We’ll need to know the name and location of your current pharmacy, any medication you’re taking, and any medication allergies you have.
+            li.steps__item.steps__item--step-3
+              h4.steps__item-title 3. Talk to your doctor
+              p.steps__item-text Ask your doctor to send your prescription to Good Pill Home Delivery. They can send prescriptions electronically or via fax. 
+              p.steps__item-text
+                a(href="#").link Providers can learn more here.
+          a(href="#").steps__btn.btn.btn--big Sign Up
+    .explanation-block.explanation-block--third
+      .main-content__wrapper
+        .explanation-block__wrapper
+          .explanation-block__column
+            h1.explanation-block__title Need refills?
+          .explanation-block__column
+            p.explanation-block__text Once you’re registered and your prescription is sent to Good Pill, we’ll automatically send refills until you have no refills remaining.
+            a(href="#").explanation-block__btn.btn.btn--transparent Check our FAQ to learn more
+    .help
+      .main-content__wrapper
+        .help__wrapper
+          h2.help__title How Good Pill helps
+          .help__carousel
+            .swipeshow
+              ul.slides
+                li.slide
+                  blockquote.help__blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt laoreet leo, eget laoreet mi pellentesque volutpat. Phasellus id metus nec lectus porta interdum eu id diam.
+                    cite.help__blockquote-author Press Org
+                li.slide
+                  blockquote.help__blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt laoreet leo, eget laoreet mi pellentesque volutpat. Phasellus id metus nec lectus porta interdum eu id diam.
+                    cite.help__blockquote-author Press Org
+                li.slide
+                  blockquote.help__blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt laoreet leo, eget laoreet mi pellentesque volutpat. Phasellus id metus nec lectus porta interdum eu id diam.
+                    cite.help__blockquote-author Press Org
+                li.slide
+                  blockquote.help__blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt laoreet leo, eget laoreet mi pellentesque volutpat. Phasellus id metus nec lectus porta interdum eu id diam.
+                    cite.help__blockquote-author Press Org
+            .dots
+    .partners
+      .main-content__wrapper
+        .partners__wrapper
+          h2.partners__title Featured on
+          ul.partners__list
+            li.partners__item
+              a(href="#")
+                img(src="img/partner1.png", alt="wabe" width=121)
+            li.partners__item
+              a(href="#")
+                img(src="img/partner2.png", alt="wsbtv" width=133)
+            li.partners__item
+              a(href="#")
+                img(src="img/partner3.png", alt="cbs46" width=89)
+            li.partners__item
+              a(href="#")
+                img(src="img/partner4.png", alt="ghn" width=284)
+    .call-to-action-block
+      .main-content__wrapper
+        .call-to-action-block__wrapper
+          h2.call-to-action-block__title Do the medications you need feel out of reach? <br>We are here for you.
+          a(href="#").call-to-action-block__btn.btn.btn--big Sign Up

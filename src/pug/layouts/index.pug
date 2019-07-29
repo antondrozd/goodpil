@@ -1,0 +1,14 @@
+html(lang="en")
+  block head
+    include /blocks/head
+  body
+    block header
+      include /mixins/header
+      +header()
+
+    block main
+
+    block footer
+      include /blocks/footer
+
+  include /blocks/scripts

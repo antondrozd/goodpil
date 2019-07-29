@@ -1,0 +1,19 @@
+.logo {
+  > * {
+    width: 213px;
+    height: 66px;
+  }
+
+  @media #{$lg} {
+    > * {
+      width: 155px;
+    }
+  }
+
+  @media #{$xs} {
+    > * {
+      width: 87px;
+      height: 27px;
+    }
+  }
+}

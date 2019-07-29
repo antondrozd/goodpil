@@ -1,0 +1,195 @@
+@mixin container() {
+  width: 1300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  @media #{$lg} {
+    width: 1120px;
+  }
+
+  @media #{$md} {
+    width: 920px;
+  }
+
+  @media #{$sm} {
+    width: 700px;
+  }
+
+  @media #{$xs} {
+    width: 100%;
+    padding: 0 8.2%;
+  }
+}
+
+@mixin ul-reset() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin a-reset() {
+  color: inherit;
+  text-decoration: none;
+}
+
+@function reduce-number($number, $percentage) {
+  @return ($number - ($number / 100 * $percentage));
+}
+
+@mixin responsive-font($fs-base, $lh-base) {
+  font-size: #{$fs-base}px;
+  line-height: #{$lh-base}px;
+
+  @media #{$lg} {
+    font-size: #{(reduce-number($fs-base, 30))}px;
+    line-height: #{(reduce-number($lh-base, 30))}px;
+  }
+
+  @media #{$md} {
+    font-size: #{(reduce-number($fs-base, 35))}px;
+    line-height: #{(reduce-number($lh-base, 35))}px;
+  }
+
+  @media #{$sm} {
+    font-size: #{(reduce-number($fs-base, 40))}px;
+    line-height: #{(reduce-number($lh-base, 40))}px;
+  }
+}
+
+@mixin h1() {
+  @include responsive-font(82, 112);
+
+  @media #{$xs} {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+@mixin h2() {
+  @include responsive-font(72, 98);
+
+  @media #{$xs} {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+@mixin h3() {
+  @include responsive-font(60, 82);
+
+  @media #{$xs} {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
+@mixin h4() {
+  @include responsive-font(26, 46);
+
+  @media #{$xs} {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+@mixin h5() {
+  @include responsive-font(24, 42);
+
+  @media #{$xs} {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+@mixin h6() {
+  @include responsive-font(22, 42);
+
+  @media #{$xs} {
+    font-size: 12px;
+    line-height: 22px;
+  }
+}
+
+@mixin decorative-img(
+  $url,
+  $width,
+  $height,
+  $top: '',
+  $right: '',
+  $bottom: '',
+  $left: '',
+  $position: ''
+) {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+
+    @if $top != '' {
+      top: $top;
+    }
+    @if $right != '' {
+      right: $right;
+    }
+    @if $bottom != '' {
+      bottom: $bottom;
+    }
+    @if $left != '' {
+      left: $left;
+    }
+
+    width: $width;
+    height: $height;
+
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @if $position != '' {
+      background-position: #{$position};
+    }
+  }
+}
+
+@mixin decorative-img-2(
+  $url,
+  $width,
+  $height,
+  $top: '',
+  $right: '',
+  $bottom: '',
+  $left: '',
+  $position: ''
+) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+
+    @if $top != '' {
+      top: $top;
+    }
+    @if $right != '' {
+      right: $right;
+    }
+    @if $bottom != '' {
+      bottom: $bottom;
+    }
+    @if $left != '' {
+      left: $left;
+    }
+
+    width: $width;
+    height: $height;
+
+    background-image: url($url);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @if $position != '' {
+      background-position: #{$position};
+    }
+  }
+}

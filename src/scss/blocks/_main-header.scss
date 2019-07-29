@@ -1,0 +1,19 @@
+.main-header {
+  padding-top: 45px;
+  margin: 0 auto;
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__menu-icon {
+    display: none;
+  }
+
+  @media #{$xs} {
+    padding-top: 39px;
+  }
+}

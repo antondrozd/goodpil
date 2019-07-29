@@ -1,0 +1,167 @@
+.saves {
+  padding-top: 214px;
+  padding-bottom: 182px;
+
+  &__wrapper {
+    @include decorative-img('../img/pills3.png', 250px, 501px, 12%, -23px);
+    @include decorative-img-2(
+      '../img/pills4.png',
+      190px,
+      450px,
+      '',
+      '',
+      -75.5%,
+      45px
+    );
+  }
+
+  &__title {
+    @include h3();
+    margin: 0 auto;
+    margin-bottom: 93px;
+    font-family: $secondary-font;
+    text-align: center;
+    color: $blue;
+  }
+
+  &__form-field {
+    width: 66%;
+    margin: 0 auto;
+    margin-bottom: 80px !important;
+  }
+
+  &__columns {
+    display: flex;
+    width: 66%;
+    margin: 0 auto;
+  }
+
+  &__column {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+    padding-top: 18px;
+    padding-left: 25px;
+
+    &:first-child {
+      border-right: 1px solid #c3c9d5;
+    }
+  }
+
+  &__price {
+    font-size: 40px;
+    line-height: 46px;
+
+    &--brand-color {
+      color: $brand-color;
+    }
+  }
+
+  &__price-title {
+    margin: 0;
+    margin-bottom: 26px;
+    font-size: 30px;
+  }
+
+  @media #{$md} {
+    &__wrapper {
+      &::before {
+        width: 160px;
+        left: 15px;
+      }
+
+      &::after {
+        width: 210px;
+        right: -70px;
+      }
+    }
+  }
+
+  @media #{$sm} {
+    &__wrapper {
+      &::before {
+        width: 110px;
+        left: 15px;
+      }
+
+      &::after {
+        width: 160px;
+        right: -70px;
+      }
+    }
+
+    &__title {
+      max-width: 65%;
+    }
+
+    &__price {
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__price-title {
+      margin-bottom: 12px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 166px;
+    padding-bottom: 65px;
+
+    &__wrapper {
+      &::before {
+        width: 74px;
+        height: 174px;
+        bottom: -24%;
+        left: -13px;
+      }
+
+      &::after {
+        top: 37.5%;
+        right: 0;
+        width: 67px;
+        height: 82px;
+        background-image: url('../img/pills3-mobile.png');
+      }
+    }
+
+    &__title {
+      max-width: 80%;
+      margin-bottom: 34px;
+    }
+
+    &__form-field {
+      width: 97%;
+      margin-bottom: 0px !important;
+    }
+
+    &__columns {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__column {
+      min-width: 152px;
+      padding: 26px 0;
+      text-align: center;
+
+      &:first-child {
+        border-right: none;
+        border-bottom: 1px solid #c3c9d5;
+      }
+    }
+
+    &__price-title {
+      margin-bottom: 0;
+      font-size: 16px;
+      line-height: 46px;
+    }
+
+    &__price {
+      font-size: 32px;
+      line-height: 46px;
+    }
+  }
+}

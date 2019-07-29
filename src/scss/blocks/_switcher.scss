@@ -1,0 +1,30 @@
+.switcher {
+  margin: 0 auto;
+  border: 1px solid #5052fd;
+  border-radius: 45px;
+
+  &__btn {
+    @include a-reset();
+    @include h6();
+    display: inline-block;
+    padding: 15px 35px;
+    font-weight: $bold;
+    border-radius: 45px;
+    color: #5052fd;
+
+    &--active {
+      color: $white;
+      background-color: #5052fd;
+    }
+  }
+
+  @media #{$xs} {
+    display: inline-flex !important;
+
+    &__btn {
+      padding: 7px 21px;
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}

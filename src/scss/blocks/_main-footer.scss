@@ -1,0 +1,71 @@
+.main-footer {
+  padding-top: 80px;
+  padding-bottom: 95px;
+  color: $white;
+  background-color: $brand-dark-color;
+
+  &__wrapper {
+    @include container();
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 100px;
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0;
+    margin-top: 22px;
+    font-size: 16px;
+    line-height: 46px;
+  }
+
+  &__sirum-logo {
+    margin-left: 25px;
+  }
+
+  &__social {
+    margin-left: auto;
+  }
+
+  @media #{$md} {
+    &__text {
+      font-size: 16px;
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 34px;
+    padding-bottom: 25px;
+
+    &__logo {
+      margin: 0;
+      > * {
+        width: 142px;
+        height: 44px;
+      }
+    }
+
+    &__social {
+      order: 2;
+    }
+
+    &__main-nav {
+      order: 3;
+      width: 100%;
+      margin-top: 24px;
+    }
+
+    &__text {
+      order: 4;
+      margin-top: 20px;
+      font-size: 12px;
+      line-height: 26px;
+    }
+  }
+}

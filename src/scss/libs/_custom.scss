@@ -1,0 +1,45 @@
+.swipeshow {
+  width: 100%;
+  min-height: 374px;
+  margin: 0 auto;
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  bottom: -82px;
+  transform: translateX(-50%);
+
+  .dot-item {
+    width: 18px;
+    height: 18px;
+    margin: 6px;
+    background-color: #eceaea;
+    border-radius: 50%;
+    border: none;
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover:not(.active) {
+      background-color: rgba(#2291f8, 0.2);
+    }
+
+    &.active {
+      background-color: #2291f8;
+    }
+  }
+
+  @media #{$sm} {
+    left: 6vw;
+    bottom: 50px;
+  }
+
+  @media #{$xs} {
+    left: 19.5vw;
+    bottom: 58px;
+
+    .dot-item {
+      margin: 12px;
+    }
+  }
+}

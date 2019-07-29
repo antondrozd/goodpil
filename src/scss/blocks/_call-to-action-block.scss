@@ -1,0 +1,120 @@
+.call-to-action-block {
+  padding-top: 153px;
+  padding-bottom: 160px;
+  background-color: #eef8ff;
+
+  &__wrapper {
+    @include decorative-img(
+      '../img/pills7.png',
+      351px,
+      534px,
+      '',
+      '',
+      -200px,
+      -55px
+    );
+    @include decorative-img-2(
+      '../img/pills8.png',
+      381px,
+      calc(100% + 313px),
+      -153px,
+      -157px
+    );
+
+    text-align: center;
+  }
+
+  &__title {
+    @include h3();
+    max-width: 860px;
+    margin: 0 auto;
+    margin-bottom: 85px;
+    font-family: $secondary-font;
+    line-height: 98px;
+    color: $blue;
+  }
+
+  &__text {
+    @include h4();
+    margin: 0;
+    margin-bottom: 82px;
+  }
+
+  &__btn {
+    padding: 15px 51px;
+  }
+
+  @media #{$lg} {
+    &__title {
+      max-width: 700px;
+    }
+  }
+
+  @media #{$md} {
+    &__wrapper {
+      &::before {
+        width: 320px;
+      }
+
+      &::after {
+        width: 320px;
+        bottom: -245px;
+        left: -100px;
+      }
+    }
+
+    &__title {
+      max-width: 570px;
+    }
+  }
+
+  @media #{$sm} {
+    &__wrapper {
+      &::before {
+        width: 280px;
+      }
+
+      &::after {
+        width: 300px;
+        bottom: -280px;
+        left: -140px;
+      }
+    }
+
+    &__title {
+      max-width: 430px;
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 162px;
+    padding-bottom: 205px;
+
+    &__wrapper {
+      &::before {
+        top: -200px;
+        right: 26px;
+        width: 101px;
+        height: 230px;
+        transform: rotate(55deg);
+      }
+
+      &::after {
+        width: 174px;
+        height: 261px;
+        bottom: -224px;
+        left: -60px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 28px;
+      font-size: 26px;
+      line-height: 40px;
+    }
+
+    &__btn {
+      padding: 10px 30px;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.help {
+  padding-top: 203px;
+  padding-bottom: 166px;
+
+  &__wrapper {
+    text-align: center;
+  }
+
+  &__title {
+    @include h3();
+    margin: 0;
+    margin-bottom: 103px;
+    font-family: $secondary-font;
+    color: $blue;
+  }
+
+  &__carousel {
+    @include decorative-img('../img/pills6.png', 328px, 272px, 44%, -176px);
+    @include decorative-img-2(
+      '../img/quotes.png',
+      100px,
+      67px,
+      -13px,
+      '',
+      '',
+      -20px
+    );
+
+    width: 857px;
+    margin: 0 auto;
+
+    &::before,
+    &::after {
+      z-index: 1000;
+    }
+  }
+
+  &__blockquote {
+    @include h5();
+    padding: 60px 111px 70px;
+    margin: 0;
+    text-align: left;
+    background-color: #fafafa;
+  }
+
+  &__blockquote-author {
+    @include h5();
+    display: block;
+    margin-top: 32px;
+    font-weight: $bold;
+    font-style: normal;
+  }
+
+  @media #{$sm} {
+    padding-bottom: 80px;
+    
+    &__carousel {
+      &::after {
+        right: 100px;
+        width: 340px;
+      }
+    }
+  }
+
+  @media #{$xs} {
+    padding-top: 139px;
+    padding-bottom: 0;
+    
+    &__title {
+      margin-bottom: 46px;
+    }
+
+    &__carousel {
+      width: 100%;
+      padding-left: 18px;
+
+      &::after {
+        top: 59%;
+        right: -10px;
+        width: 164px;
+        height: 136px;
+      }
+
+      &::before {
+        top: -9px;
+        left: 8px;
+        width: 63px;
+        height: 42px;
+      }
+    }
+
+    &__blockquote {
+      padding: 54px 45px 50px 21px;
+    }
+  
+    &__blockquote-author {
+      margin-top: 28px;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+// colors
+$brand-color: #05c2ff;
+$brand-dark-color: #1b1a6d;
+$white: #fff;
+$blue: #2b29ab;
+$yellow: #fff521;
+$red: #ff6969;
+$gray-100: rgba(#3d4554, 0.7);
+$gray-200: #3d4554;
+$body-color: $white;
+
+// typography
+$main-font: 'Noto Sans', 'Arial', 'Helvetica', sans-serif;
+$secondary-font: 'Noto Serif TC', 'Arial', 'Helvetica', sans-serif;
+$main-font-size: 18px;
+// $light: 300;
+$regular: 400;
+$medium: 600;
+$bold: 700;
+
+// other
+
+// breakpoints
+$lg: '(max-width: 1439px)';
+$md: '(max-width: 1199px)';
+$sm: '(max-width: 991px)';
+$xs: '(max-width: 767px)';

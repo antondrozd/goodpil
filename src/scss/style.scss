@@ -1,0 +1,25 @@
+@import 'variables';
+@import 'mixins';
+@import 'global';
+@import 'fonts';
+@import 'blocks/btn';
+@import 'blocks/logo';
+@import 'blocks/main-header';
+@import 'blocks/main-nav';
+@import 'blocks/first-screen';
+@import 'blocks/main-content';
+@import 'blocks/explanation-block';
+@import 'blocks/we-believe';
+@import 'blocks/link';
+@import 'blocks/form-field';
+@import 'blocks/saves';
+@import 'blocks/switcher';
+@import 'blocks/steps';
+@import 'blocks/help';
+@import 'blocks/partners';
+@import 'blocks/call-to-action-block';
+@import 'blocks/main-footer';
+@import 'blocks/social';
+
+@import '../../node_modules/swipeshow/jquery.swipeshow';
+@import 'libs/custom';
