@@ -1,5 +1,7 @@
 .main-content {
-  overflow: hidden;
+  @media (max-width: 1950px) {
+    overflow: hidden;
+  }
 
   &__wrapper {
     @include container();

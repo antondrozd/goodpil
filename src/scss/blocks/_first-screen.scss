@@ -5,12 +5,12 @@
 
   @include decorative-img(
     '../img/first-screen.png',
-    807px,
+    50vw,
     100%,
     '',
-    '',
     0,
-    50%,
+    0,
+    '',
     'right bottom'
   );
 
@@ -38,12 +38,21 @@
     z-index: 2;
   }
 
+  @media (min-width: 1950px) {
+    &::after {
+      top: -12%;
+      bottom: auto;
+      height: 140%;
+      z-index: -1;
+    }
+  }
+
   @media #{$lg} {
     padding-top: 120px;
     padding-bottom: 180px;
 
     &::after {
-      left: 41%;
+      // left: 41%;
     }
 
     &__title {
@@ -55,7 +64,7 @@
 
   @media #{$md} {
     &::after {
-      left: 35%;
+      // left: 35%;
     }
 
     &__title {
@@ -73,7 +82,7 @@
 
   @media #{$sm} {
     &::after {
-      left: 30%;
+      width: 47vw;
     }
 
     &__title {
@@ -90,8 +99,8 @@
     padding-bottom: 342px;
 
     &::after {
-      right: 0;
-      left: auto;
+      // right: 0;
+      // left: auto;
       width: 344px;
       height: 394px;
     }

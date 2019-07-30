@@ -5,6 +5,15 @@
 
   &__wrapper {
     text-align: center;
+
+    @include decorative-img(
+      '../img/pills9.png',
+      200px,
+      213px,
+      '',
+      30px,
+      -230px
+    );
   }
 
   &__title {
@@ -48,6 +57,7 @@
 
     &--step-1 {
       @include decorative-img('../img/step-1.png', 309px, 214px, 0, 66%);
+      @include decorative-img-2('../img/line1.png', 333px, 42px, 19%, -20%);
 
       &::after {
         transform: translateX(50%);
@@ -55,6 +65,7 @@
     }
     &--step-2 {
       @include decorative-img('../img/step-2.png', 264px, 170px, 39px, 60%);
+      @include decorative-img-2('../img/line2.png', 319px, 54px, 26.5%, -23%);
 
       &::after {
         transform: translateX(50%);
@@ -92,6 +103,17 @@
     padding: 15px 51px;
   }
 
+  @media #{$lg} {
+    &__item {
+      &--step-2 {
+        &::before {
+          top: 24.5%;
+          right: -37%;
+        }
+      }
+    }
+  }
+
   @media #{$md} {
     &__item {
       padding: 0 20px;
@@ -110,6 +132,13 @@
           top: 20px;
         }
       }
+
+      &--step-2 {
+        &::before {
+          width: 270px;
+          right: -46%;
+        }
+      }
     }
 
     &__item-text {
@@ -120,6 +149,14 @@
   @media #{$sm} {
     padding-top: 40px;
     padding-bottom: 75px;
+
+    &__wrapper {
+      &::after {
+        width: 150px;
+        right: 0;
+        bottom: -180px;
+      }
+    }
 
     &__title {
       max-width: 65%;
@@ -147,6 +184,20 @@
       &::after {
         width: 180px;
       }
+
+      &--step-1 {
+        &::before {
+          width: 250px;
+          top: 20%;
+        }
+      }
+
+      &--step-2 {
+        &::before {
+          width: 250px;
+          right: -45%;
+        }
+      }
     }
 
     &__item-text {
@@ -159,6 +210,14 @@
   @media #{$xs} {
     padding-top: 61px;
     padding-bottom: 74px;
+
+    &__wrapper {
+      &::after {
+        width: 115px;
+        height: 110px;
+        bottom: -166px;
+      }
+    }
 
     &__column {
       width: 100%;
@@ -213,6 +272,10 @@
           width: 214px;
           height: 148px;
         }
+
+        &::before {
+          display: none;
+        }
       }
       &--step-2 {
         padding-top: 223px;
@@ -221,6 +284,10 @@
           top: 65px;
           width: 180px;
           height: 116px;
+        }
+
+        &::before {
+          display: none;
         }
       }
       &--step-3 {
